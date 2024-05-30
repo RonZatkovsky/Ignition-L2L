@@ -48,7 +48,7 @@ def get_dispatches():
         
         data = resp.json()
         for item in data['content']:
-            if (data['content'][item]['status']=="true" or data['content'][item]['status']=="1") and data['content'][item]['cyclecount']!=None and not ("GL-" in item) :
+            if (data['content'][item]['status']=="true" or data['content'][item]['status']=="1") and data['content'][item]['cyclecount']!=None:
                 machine_arr.append((" ".join(item.split()[0:2]),data['content'][item]['cyclecount']))
     
         return machine_arr 
