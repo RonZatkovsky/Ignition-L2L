@@ -9,7 +9,6 @@ def setCycleCount(apikey,machines):
             try:
                 if machine_pair[0]:        #for testing purposes, remove when ready to launch.
                     print(machine_pair[0])
-                    break
                     url="https://edgewell.leading2lean.com/api/1.0/machines/set_cycle_count/"+"?auth="+apikey+"&site=800"+"&code="+machine_pair[0].replace(" ","%20")+"%20PM"+"&cyclecount="+str(machine_pair[1])
                     response=requests.post(url, verify=False)
                     # print(url)
